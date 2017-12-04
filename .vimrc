@@ -18,7 +18,11 @@ Plugin 'gmarik/Vundle.vim'
 Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/syntastic'
 Plugin 'vim-airline/vim-airline'
-Bundle 'nanotech/jellybeans.vim'
+Plugin 'sotte/presenting.vim'
+       "Write presentation using separators Markdown (# heading),
+       "RST (~~~~), Orgmode (#----), GoLang slide (* title)
+       "To start presenting, execute :PresentingStart
+       "n = nest slide, p = previous slide, q = quit
 
 call vundle#end()
 
@@ -32,6 +36,8 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isT
 " =============== General Config ===============
 
 set number                     "Line numbers are good
+set path+=**                   "Search into sub-folders, provide tab-completion for all file tasks
+set wildmenu                   "Display all matching files when we tab complete
 set backspace=indent,eol,start "Allow backspace in insert mode
 set showmode                   "Show current mode at bottom
 set showcmd                    "Show command in bottom bar
@@ -47,6 +53,9 @@ set wrap                       "Wrap lines
 set encoding=utf8              "Set encoding for UTF8
 set laststatus=2               "Needed for vim-airline
 set ttimeoutlen=50             "Needed for vim-airline
+set background=dark            "Set backgound to dark
+
+colorscheme murphy
 
 syntax on                      "Turn on syntax highlighting
 
