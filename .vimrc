@@ -55,7 +55,7 @@ set laststatus=2               "Needed for vim-airline
 set ttimeoutlen=50             "Needed for vim-airline
 set background=dark            "Set backgound to dark
 
-colorscheme murphy
+colorscheme elflord
 
 syntax on                      "Turn on syntax highlighting
 
